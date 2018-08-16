@@ -1,9 +1,8 @@
 {
   "version": "2.4.0",
   "author": {
-    "name": "Anton Fisher",
-    "email": "a.fschr@gmail.com",
-    "url": "http://antonfisher.com"
+    "name": "Windbringer",
+    "email": "windbring@gmail.com"
   },
   "description": "React boilerplate with ES2015, Express.js, and Webpack",
   "license": "MIT",
@@ -12,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/antonfisher/react-express-webpack.git"
+    "url": "https://github.com/fwind4/big-ent-2.git"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development node src/server",
@@ -47,7 +46,7 @@
     "eslint-import-resolver-webpack": "0.10.1",
     "eslint-plugin-babel": "5.1.0",
     "eslint-plugin-flowtype": "2.50.0",
-    "eslint-plugin-import": "2.13.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-react": "7.10.0",
