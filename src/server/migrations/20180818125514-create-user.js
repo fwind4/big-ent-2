@@ -9,7 +9,9 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        defaultValue: false,
+        allowNull: false
       },
       firstName: {
         type: Sequelize.STRING
@@ -18,18 +20,24 @@ module.exports = {
         type: Sequelize.STRING
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        defaultValue: false,
+        allowNull: false
       },
       passwordHash: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        defaultValue: false,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('NOW')
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('NOW')
       }
     });
   },
