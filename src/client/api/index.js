@@ -64,7 +64,11 @@ function _request(params) {
     .catch((error) => throwApiError(requestUrl, error.message));
 }
 
-// application api
+// application api'
+
+function getUsers() {
+  return _request(`${endpoint}/users`);
+}
 
 function getStats() {
   return _request(`${endpoint}/stats`);
@@ -81,6 +85,7 @@ function addServer(payload) {
 }
 
 export default {
+  getUsers,
   getStats,
   addServer,
   setEndpoint

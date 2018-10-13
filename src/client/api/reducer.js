@@ -1,6 +1,6 @@
 import {List, Map, OrderedMap} from 'immutable';
 
-import {API_DATA_SERVERS_LOADED, API_REQUEST_FINISHED, API_REQUEST_STARTED} from 'api/actions';
+import {API_DATA_USERS_LOADED, API_DATA_SERVERS_LOADED, API_REQUEST_FINISHED, API_REQUEST_STARTED} from 'api/actions';
 
 const initialState = Map({
   loading: false,
@@ -9,10 +9,12 @@ const initialState = Map({
     last: null
   }),
   lastUpdate: Map({
-    servers: null
+    servers: null,
+    users: null
   }),
   data: Map({
-    servers: List()
+    servers: List(),
+    users: List(),
   })
 });
 
@@ -34,6 +36,11 @@ export default function ApiReducer(state = initialState, action) {
       return state
         .setIn(['lastUpdate', 'servers'], Date.now())
         .setIn(['data', 'servers'], List(action.payload.servers));
+
+    case API_DATA_USERS_LOADED:
+      return state
+        .setIn(['lastUpdate', 'users'], Date.now())
+        .setIn(['data', 'users'], List(action.payload.users));
 
     default:
       return state;

@@ -7,7 +7,7 @@ import Paper from 'material-ui/Paper';
 import AppBar from 'containers/AppBar';
 import AppMenu from 'containers/AppMenu';
 import ModalsLayout from 'containers/ModalsLayout/ModalsLayout';
-import NotFound from 'containers/NotFound';
+import UsersPage from 'containers/UsersPage/UsersPage';
 import ServersPage from 'containers/ServersPage/ServersPage';
 import ProgressBar from 'components/ProgressBar';
 
@@ -30,7 +30,7 @@ export class AppLayout extends React.Component {
         <section style={{paddingTop: 50}}>
           <Switch>
             <Route exact path="/" component={ServersPage} />
-            <Route exact path="/users" name="home-users" component={NotFound} />
+            <Route exact path="/users" component={UsersPage} />
             <Redirect to="/" />
           </Switch>
         </section>
