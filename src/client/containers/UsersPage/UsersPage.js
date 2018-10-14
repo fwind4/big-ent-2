@@ -48,6 +48,7 @@ export class UsersPage extends React.Component {
         <Table multiSelectable>
           <TableHeader>
             <TableRow displayBorder>
+              <TableHeaderColumn>Role</TableHeaderColumn>
               <TableHeaderColumn>User Name</TableHeaderColumn>
               <TableHeaderColumn>First Name</TableHeaderColumn>
               <TableHeaderColumn>Last Name</TableHeaderColumn>
@@ -57,6 +58,7 @@ export class UsersPage extends React.Component {
           <TableBody showRowHover>
             {users.map((data) => (
               <TableRow key={data.id}>
+                <TableRowColumn>{data.RoleId}</TableRowColumn>
                 <TableRowColumn>{data.userName}</TableRowColumn>
                 <TableRowColumn>{data.firstName}</TableRowColumn>
                 <TableRowColumn>{data.lastName}</TableRowColumn>
